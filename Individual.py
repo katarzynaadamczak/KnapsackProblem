@@ -19,10 +19,15 @@ class Individual:
         sum_c_i = np.sum(np.multiply(self.chromosome, task.c_i))
 
         # print(sum_w_i, task.w)
+        # print(sum_c_i)
 
         if sum_w_i < task.w and sum_s_i < task.s:
             return sum_c_i
         else:
             return 0
+
+    def best_individual(self, task : Task):
+        sum_c_i = np.sum(np.multiply(self.chromosome, task.c_i))
+        return sum_c_i
 
 
